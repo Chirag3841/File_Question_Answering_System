@@ -12,7 +12,22 @@ Generation — Mistral generates answers strictly based on the retrieved code �
 
 
 Tech Stack
-ComponentTechnologyLLMMistral-7B-Instruct-v0.2 (4-bit quantized)Code ParsingTree-sitterEmbeddingsSentence Transformers — all-MiniLM-L6-v2Vector SearchFAISSQuantizationBitsAndBytes NF4 4-bitPlatformKaggle T4 GPU
+| Component     | Technology                              |
+|---------------|-----------------------------------------|
+| LLM           | Mistral-7B-Instruct-v0.2 (4-bit)        |
+| Code Parsing  | Tree-sitter                             |
+| Embeddings    | Sentence Transformers (all-MiniLM-L6-v2)|
+| Vector Search | FAISS                                   |
+| Quantization  | BitsAndBytes NF4 4-bit                  |
+| Platform      | Kaggle T4 GPU                           |
 
 Features
-CommandDescriptionAsk anythingQ&A about the codesummaryHigh-level file overviewlistShow all functions and classesdebug:<function_name>Bug analysis + fixed versionexplain:<function>:<line>Explain a specific linegenerate:<description>Generate new code in same styleexitQuit
+| Command                    | Description                    |
+|----------------------------|--------------------------------|
+| Ask anything               | Q&A about the code             |
+| summary                    | High-level file overview       |
+| list                       | Show all functions and classes |
+| debug:<function_name>      | Bug analysis + fixed version   |
+| explain:<function>:<line>  | Explain a specific line        |
+| generate:<description>     | Generate new code in same style|
+| exit                       | Quit                           |

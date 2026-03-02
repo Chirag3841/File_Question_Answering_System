@@ -1,23 +1,18 @@
 # File_Question_Answering_System
+
 🤖 RAG Code Assistant — Powered by Mistral-7B
-RAG Code Assistant is an AI-powered tool that analyzes any Python file and lets you interact with it conversationally. It uses Tree-sitter to parse code, FAISS to find relevant functions, and Mistral-7B to generate accurate answers. You can ask questions, debug functions, explain specific lines, and generate new code .
+A conversational AI tool that lets you interact with any Python file using a proper RAG (Retrieval-Augmented Generation) pipeline. Instead of feeding the entire file to the model, it semantically retrieves only the most relevant functions and classes for each query — making answers accurate, grounded, and hallucination-free.
+You can ask questions about the code, debug functions, explain specific lines, and generate new code — all running locally on GPU with zero API costs.
+
+🔍 How RAG Works Here
+
+Retrieval — FAISS semantically searches and fetches the top-3 most relevant functions/classes for your query
+Augmented — The retrieved code chunks are injected into the Mistral prompt as context
+Generation — Mistral generates answers strictly based on the retrieved code — nothing else
+
+
 🛠️ Tech Stack
+ComponentTechnologyLLMMistral-7B-Instruct-v0.2 (4-bit quantized)Code ParsingTree-sitterEmbeddingsSentence Transformers — all-MiniLM-L6-v2Vector SearchFAISSQuantizationBitsAndBytes NF4 4-bitPlatformKaggle T4 GPU
 
-LLM — Mistral-7B-Instruct-v0.2 (4-bit quantized)
-Parser — Tree-sitter
-Embeddings — Sentence Transformers (MiniLM-L6-v2)
-Vector Search — FAISS
-Platform — Kaggle T4 GPU
-
-## 💬 Commands
-
-| Command | Description |
-|---|---|
-| Ask anything | Q&A about the code |
-| `summary` | File overview |
-| `list` | Show all functions/classes |
-| `debug:<function_name>` | Bug analysis + fixed version |
-| `explain:<function>:<line>` | Explain a specific line |
-| `generate:<description>` | Generate new code |
-| `exit` | Quit |
-
+💬 Features
+CommandDescriptionAsk anythingQ&A about the codesummaryHigh-level file overviewlistShow all functions and classesdebug:<function_name>Bug analysis + fixed versionexplain:<function>:<line>Explain a specific linegenerate:<description>Generate new code in same styleexitQuit

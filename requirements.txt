@@ -1,0 +1,22 @@
+# Core LLM + Quantization
+transformers>=4.36.0
+accelerate>=0.25.0
+bitsandbytes>=0.41.0
+
+# Embeddings + Reranker
+sentence-transformers>=2.3.0
+
+# Vector Search
+faiss-cpu>=1.7.4
+
+# Code Parsing
+tree-sitter==0.20.4
+tree-sitter-languages>=1.8.0
+
+# ML Utilities
+torch>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# Misc
+einops>=0.7.0
